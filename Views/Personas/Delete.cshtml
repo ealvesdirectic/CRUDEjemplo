@@ -1,0 +1,96 @@
+﻿@model CRUDEjemplo.Models.Persona
+
+@{
+    ViewBag.Title = "Eliminar";
+}
+
+<h2>Eliminar</h2>
+
+
+<div class="container mt-4">
+    <div class="card shadow-lg border-0 rounded-3">
+
+        <div class="card-header bg-info text-white">
+            <h4 class="mb-0">Eliminar Persona - ¿Estás seguro de eliminar a la persona?</h4>
+        </div>
+        <div class="card-body">
+            <dl class="dl-horizontal">
+                <dt>
+                    Nombre Completo
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Nombre)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.Edad)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Edad)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.Correo)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Correo)
+                </dd>
+
+                <dt>
+                    Teléfono
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Telefono)
+                </dd>
+
+                <dt>
+                    Dirección
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Direccion)
+                </dd>
+
+                <dt>
+                    Fecha de Nacimiento
+                </dt>
+
+                <dd>
+                    @Model.FechaNacimiento.ToString("yyyy-MM-dd")
+                </dd>
+
+                <dt>
+                    Género
+                </dt>
+
+                <dd>
+                    @(Model.Genero == "M" ? "Masculino" : Model.Genero == "F" ? "Femenino" : "No especificado")
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.Rut)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Rut)
+                </dd>
+
+            </dl>
+            @using (Html.BeginForm())
+            {
+                @Html.AntiForgeryToken()
+                <div class="d-flex justify-content-between">
+                    <a href="@Url.Action("Index")" class="btn btn-secondary">
+                        Volver
+                    </a>
+                    <input type="submit" value="Delete" class="btn btn-primary" />
+                </div>
+
+            }
+        </div>
+    </div>
+</div>

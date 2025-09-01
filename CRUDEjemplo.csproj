@@ -125,15 +125,21 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\DbInitializer.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\PersonasController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Migrations\202508292114156_InitialCreate.cs" />
     <Compile Include="Migrations\202508292114156_InitialCreate.Designer.cs">
       <DependentUpon>202508292114156_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202509011645526_AgregarValidacionesPersona.cs" />
+    <Compile Include="Migrations\202509011645526_AgregarValidacionesPersona.Designer.cs">
+      <DependentUpon>202509011645526_AgregarValidacionesPersona.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Persona.cs" />
@@ -187,9 +193,12 @@
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
-    <Content Include="Views\Home\About.cshtml" />
-    <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Personas\Create.cshtml" />
+    <Content Include="Views\Personas\Delete.cshtml" />
+    <Content Include="Views\Personas\Details.cshtml" />
+    <Content Include="Views\Personas\Edit.cshtml" />
+    <Content Include="Views\Personas\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -224,6 +233,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\202508292114156_InitialCreate.resx">
       <DependentUpon>202508292114156_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202509011645526_AgregarValidacionesPersona.resx">
+      <DependentUpon>202509011645526_AgregarValidacionesPersona.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
